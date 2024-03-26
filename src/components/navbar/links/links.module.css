@@ -1,0 +1,15 @@
+.links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logout{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+}
