@@ -12,6 +12,10 @@ export default function Links() {
             path:'/'
         },
         {
+            title:'Blog',
+            path:'/blog'
+        },
+        {
             title:'About',
             path:'/about'
         },
@@ -19,10 +23,7 @@ export default function Links() {
             title:'Contact',
             path:'/contact'
         },
-        {
-            title:'Blog',
-            path:'/blog'
-        },
+
     ]
 
     const [open,setOpen] = useState(false)
