@@ -1,5 +1,49 @@
-.imgContainer{
-    position: relative;
-    width: 100px;
-    height: 100px;
+.container{
+    display: flex;
+    gap: 100px;
 }
+
+.textContainer{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.subtitle{
+    color: var(--bgSoft);
+}
+
+.title{
+    font-size: 46px;
+}
+
+.desc{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+.imgContainer{
+    flex:1;
+    position: relative;
+    width: 350px;
+    height: 500px;
+}
+
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box h1{
+    color: var(--bgSoft);
+}
+
