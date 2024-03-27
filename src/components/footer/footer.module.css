@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: gray;
+}
+
+.name{
+    font-weight: bolder;
+}
+
+.socials{
+    font-weight: bolder;
+}
