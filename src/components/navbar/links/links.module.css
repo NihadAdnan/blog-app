@@ -14,7 +14,10 @@
     border-radius: 5px;
 }
 
-.menuButton,.mobileLinks{
+
+
+
+.menuImg,.menuButton,.mobileLinks{
     display: none;
 }
 
@@ -27,8 +30,14 @@
         display: block;
         cursor: pointer;
     }
+    .menuImg{
+        display: block;
+        filter: brightness(0) invert(1);
+    }
     .mobileLinks{
-        background-color: var(--bg);
+        /* background-color: var(--bg); */
+        background: linear-gradient(to top, black, rgba(255, 255, 255, 0));
+        backdrop-filter: blur(1.5px);
         position: absolute;
         top: 100px;
         right: 0;

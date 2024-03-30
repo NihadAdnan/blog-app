@@ -44,3 +44,16 @@
 }
 
 
+@media (max-width:1024px){
+    .container{
+        flex-direction: column;
+    }
+}
+@media (max-width:768px){
+    .container{
+        padding-left: 90px;
+    }
+    .title{
+        font-style: 64px;
+    }
+}

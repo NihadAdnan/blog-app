@@ -47,3 +47,15 @@
     color: var(--bgSoft);
 }
 
+@media (max-width:768px){
+    .container{
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        padding-left: 90px;
+    }
+    .boxes{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
