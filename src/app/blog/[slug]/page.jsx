@@ -7,13 +7,13 @@ import { Suspense } from "react"
 import { getPost } from "@/lib/data"
 
 //FETCHING WITH API
-// const getData = async(slug)=>{
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`)
-//   if(!res.ok){
-//     throw new Error("Something went wrong!")
-//   }
-//   return res.json()
-// }
+const getData = async(slug)=>{
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`)
+  if(!res.ok){
+    throw new Error("Something went wrong!")
+  }
+  return res.json()
+}
 
 export const generateMetaData=async({params})=>{
   const {slug} = params
@@ -30,10 +30,10 @@ const SinglePost=async({params})=> {
    const {slug} = params
 
   //FETCHING WITH API
-  // const post = await getData(slug)
+  const post = await getData(slug)
 
   //FETCHING WITHOUT API
-  const post = await getPost(slug)
+  // const post = await getPost(slug)
 
   return (
     <div className={styles.container}>
