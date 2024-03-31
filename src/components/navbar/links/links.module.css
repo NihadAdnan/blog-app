@@ -35,9 +35,7 @@
         filter: brightness(0) invert(1);
     }
     .mobileLinks{
-        /* background-color: var(--bg); */
-        background: linear-gradient(to top, black, rgba(255, 255, 255, 0));
-        backdrop-filter: blur(1.5px);
+        background-color: var(--bg); 
         position: absolute;
         top: 100px;
         right: 0;

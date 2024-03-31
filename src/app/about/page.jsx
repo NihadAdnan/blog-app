@@ -2,6 +2,12 @@ import styles from './about.module.css'
 import Image from 'next/image'
 import aboutImg from '/public/typewriter-210640_1280.jpg'
 
+
+export const metadata = {
+  title:"About Page",
+  description: "About Description",
+};
+
 export default function HomePage() {
   return (
     <div className={styles.container}>

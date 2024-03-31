@@ -2,6 +2,12 @@ import styles from './contact.module.css'
 import Image from 'next/image'
 import contactImg from '/public/giphy2.gif'
 
+
+export const metadata = {
+  title:"Contact Page",
+  description: "Contact Description",
+};
+
 export default function ContactPage() {
   return (
     <div className={styles.container}>
