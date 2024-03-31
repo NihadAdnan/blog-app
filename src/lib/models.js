@@ -14,7 +14,6 @@ const userSchema = new mongoose.Schema({
     },
     password:{
         type:String,
-        required:true,
     },    
     img:{
         type:String,
@@ -51,5 +50,5 @@ const postSchema = new mongoose.Schema({
 )
 
 
-export const User = mongoose.models.User || mongoose.model("User",userSchema)
-export const Post = mongoose.models.Post || mongoose.model("Post",postSchema)
+export const User = mongoose.models?.User || mongoose.model("User",userSchema)
+export const Post = mongoose.models?.Post || mongoose.model("Post",postSchema)

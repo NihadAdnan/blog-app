@@ -5,32 +5,33 @@ import styles from './links.module.css'
 import NavLinks from "./navLinks/NavLinks"
 import Image from 'next/image'
 import menu from '/public/menu_FILL0_wght400_GRAD0_opsz24.png'
+import { handleLogout } from '@/lib/action'
 
-export default function Links() {
 
-    const links = [
-        {
-            title:'Home',
-            path:'/'
-        },
-        {
-            title:'Blog',
-            path:'/blog'
-        },
-        {
-            title:'About',
-            path:'/about'
-        },
-        {
-            title:'Contact',
-            path:'/contact'
-        },
+const links = [
+    {
+        title:'Home',
+        path:'/'
+    },
+    {
+        title:'Blog',
+        path:'/blog'
+    },
+    {
+        title:'About',
+        path:'/about'
+    },
+    {
+        title:'Contact',
+        path:'/contact'
+    },
 
-    ]
+]
+
+export default function Links({session}) {
 
     const [open,setOpen] = useState(false)
     // temp
-    const session=true
     const isAdmin=true
   return (
     <div className={styles.container}>
@@ -38,14 +39,16 @@ export default function Links() {
         {links.map((link=>(
             <NavLinks item={link} key={link.title}/>
         )))}
-        {session ? (
+        {session?.user ? (
             <>
             {
-              isAdmin && (
+             session.user?.isAdmin && (
                 <NavLinks item={{title:'Admin',path:'/admin'}} />
               ) 
             }
+            <form action={handleLogout}>
             <button className={styles.logout}>Logout</button>
+            </form>
             </>
                  
         ) : (
