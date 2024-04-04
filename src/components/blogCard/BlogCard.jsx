@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './blogCard.module.css'
 import Image from 'next/image'
-import watch from '/public/stopwatch-5382626_1280.jpg'
+import noImg from "/public/No-Image-Placeholder.svg.png"
 
 export default function BlogCard({post}) {
   return (
@@ -9,7 +9,7 @@ export default function BlogCard({post}) {
         <div className={styles.top}>
             {post.img && 
                 <div className={styles.imgContainer}>
-                < Image src={post.img} alt='stopwatch image' fill className={styles.img}/>
+                < Image src={post.img || noImg} alt='stopwatch image' fill className={styles.img}/>
             </div>   
             }
             <span className={styles.date}>
