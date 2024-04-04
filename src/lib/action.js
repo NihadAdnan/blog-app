@@ -42,15 +42,16 @@ export const deletePost = async (formData) => {
 
 
 export const addUser = async (prevState,formData) => {
-  const { username,email,password,img } = Object.fromEntries(formData);
+  const { username,email,password,img,isAdmin } = Object.fromEntries(formData);
 
   try {
     connectToDB();
     const newUser = new User({
       username,
       email,
-      passowrd,
-      img
+      password,
+      img,
+      isAdmin
     });
     await newUser.save();
     console.log("Saved to db");
