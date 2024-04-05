@@ -11,7 +11,7 @@
     background-color: var(--bgSoft);
     border: none;
     border-radius: 5px;
-    color: var(--textColor);
+    color: black;
   }
   
   .container button {

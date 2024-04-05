@@ -65,6 +65,7 @@ export const {
               username: profile.login,
               email: profile.email,
               img: profile.avatar_url,
+              isAdmin:false
             });
             await newUser.save();
           }

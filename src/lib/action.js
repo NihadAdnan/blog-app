@@ -46,15 +46,16 @@ export const addUser = async (prevState,formData) => {
 
   try {
     connectToDB();
+    const salt = await bcrypt.genSalt(10)
+    const hashedPassword = await bcrypt.hash(password,salt)
     const newUser = new User({
       username,
       email,
-      password,
+      password:hashedPassword,
       img,
       isAdmin
     });
     await newUser.save();
-    console.log("Saved to db");
     revalidatePath("/admin");
   } catch (error) {
     return error;
