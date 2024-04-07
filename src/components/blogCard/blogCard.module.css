@@ -8,11 +8,13 @@
 .top{
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .imgContainer{
     width: 90%;
-    height: 400px;
+    height: calc(100%-20px);
     position: relative;
 }
 
@@ -21,14 +23,14 @@
 }
 
 .date{
-    font-size: 12px;
-    margin-top: -70px;
+
 }
 
 .title{
     width: 90%;
     font-size: 29px;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .desc{
@@ -36,6 +38,7 @@
     margin-bottom: 20px;
     font-weight: 300;
     color: #fde5bf;
+    padding-top: 20px;
 }
 
 .link{

@@ -9,7 +9,7 @@ export default function BlogCard({post}) {
         <div className={styles.top}>
             {post.img && 
                 <div className={styles.imgContainer}>
-                < Image src={post.img || noImg} alt='stopwatch image' fill className={styles.img}/>
+                < Image src={post.img || noImg} alt='stopwatch image' className={styles.img} width={150} height={150}/>
             </div>   
             }
             <span className={styles.date}>
