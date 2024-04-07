@@ -24,7 +24,7 @@ export default function LoginForm() {
     <button>Login</button>
     {state?.error}
     <Link href='/register'>
-    <div>Don&apos;t have an account?</div>
+    Do not have an account?
  <b>Register</b>
     </Link>
   </form>
